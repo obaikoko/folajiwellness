@@ -37,10 +37,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        <button className="hidden md:block bg-emerald-600 text-white px-6 py-3 rounded-full">
-          Book Appointment
-        </button>
-
+       
         <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden">
           {menuOpen ? <X /> : <Menu />}
         </button>

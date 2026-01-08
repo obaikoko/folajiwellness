@@ -7,7 +7,7 @@ import TeamSection from "@/components/shared/team";
 import TestimonialsSection from "@/components/shared/testimonials";
 import BlogSection from "@/components/shared/blog";
 import FooterSection from "@/components/shared/footer";
-import ProductSection from "@/components/shared/services";
+import ProductSection from "@/components/shared/product";
 
 export default function App() {
   return (

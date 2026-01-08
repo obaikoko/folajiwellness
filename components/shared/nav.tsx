@@ -1,5 +1,5 @@
 import { Leaf, Menu, X } from 'lucide-react';
-import React, { useState } from 'react'
+import  { useState } from 'react'
 
 export const Navbar = () => {
      const [menuOpen, setMenuOpen] = useState(false);
@@ -56,9 +56,7 @@ export const Navbar = () => {
             Contact
           </a>
         </div>
-        <button className="hidden md:block bg-emerald-600 text-white px-6 py-3 rounded-full hover:bg-emerald-700 transition">
-          Book Appointment
-        </button>
+      
         <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
@@ -114,9 +112,7 @@ export const Navbar = () => {
           >
             Contact
           </a>
-          <button className="bg-emerald-600 text-white px-6 py-3 rounded-full hover:bg-emerald-700 transition">
-            Book Appointment
-          </button>
+       
         </div>
       )}
     </nav>

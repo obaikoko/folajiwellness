@@ -50,9 +50,14 @@ export default function ProductSection() {
 
             {/* CTA */}
             <div className="mt-8">
-              <button className="px-8 py-4 rounded-full bg-green-600 text-white font-medium hover:bg-green-700 transition">
+              <a
+                href="https://wa.me/2349077105627?text=Hello%20I%20would%20like%20to%20order%20our%20product?"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 rounded-full bg-green-600 text-white font-medium hover:bg-green-700 transition"
+              >
                 Order Stroke Expeller Tea
-              </button>
+              </a>
             </div>
           </div>
         </div>

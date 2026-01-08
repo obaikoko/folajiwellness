@@ -18,7 +18,7 @@ export default function FooterSection() {
               className="flex items-center gap-4 hover:opacity-80 transition"
             >
               <Phone className="h-6 w-6" />
-              <span>+234 970 710 5627</span>
+              <span>+234 907 710 5627</span>
             </a>
 
             {/* Email */}
