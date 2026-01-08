@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Leaf, Menu, X } from "lucide-react";
+import {  Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -21,7 +22,8 @@ export default function Navbar() {
     <nav className="fixed top-0 w-full bg-white/90 backdrop-blur z-50 border-b">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <div className="flex items-center gap-2">
-          <Leaf className="h-8 w-8 text-emerald-600" />
+          <Image src="/images/logo.png" alt="logo" height={60} width={60} />
+          <img />
           <span className="text-2xl font-bold">Folaji Wellness</span>
         </div>
 
@@ -37,7 +39,6 @@ export default function Navbar() {
           ))}
         </div>
 
-       
         <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden">
           {menuOpen ? <X /> : <Menu />}
         </button>
