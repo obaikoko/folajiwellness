@@ -51,7 +51,7 @@ export default function ProductSection() {
             {/* CTA */}
             <div className="mt-8">
               <a
-                href="https://wa.me/2349077105627?text=Hello%20I%20would%20like%20to%20order%20your%20product."
+                href="https://docs.google.com/forms/d/1tUYD56juD9r6ZrTSnVWD3lvBBp2H8G4Oo2UUP_gNkAk/viewform?usp=sf_link"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-4 rounded-full bg-green-600 text-white font-medium hover:bg-green-700 transition"
