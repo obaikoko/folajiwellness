@@ -40,7 +40,7 @@ export default function FooterSection() {
 
           <div className="flex gap-6">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/share/1Ap9proHPM/?mibextid=wwXIfr"
               target="_blank"
               className="w-12 h-12 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 transition"
             >

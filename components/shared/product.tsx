@@ -49,12 +49,20 @@ export default function ProductSection() {
             </ul>
 
             {/* CTA */}
-            <div className="mt-8">
+            <div className="flex gap-x-4 mt-8">
               <a
                 href="https://docs.google.com/forms/d/1tUYD56juD9r6ZrTSnVWD3lvBBp2H8G4Oo2UUP_gNkAk/viewform?usp=sf_link"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-4 rounded-full bg-green-600 text-white font-medium hover:bg-green-700 transition"
+              >
+                Order via whatsapp
+              </a>
+              <a
+                href="https://wa.me/message/JDXQMF3RX7PSE1 "
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 rounded-full bg-gray-600 text-white font-medium hover:bg-green-700 transition"
               >
                 Order Stroke Expeller Tea
               </a>
