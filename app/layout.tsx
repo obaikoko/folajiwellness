@@ -16,6 +16,12 @@ export const metadata: Metadata = {
   title: "Folaji Wellness Services",
   description:
     "At Folaji Wellness Services, we provide personalized, professional health and wellness solutions to help you live your healthiest life",
+  keywords: [
+    "folaji wellness services",
+    "folaji wellness",
+    "stroke solution",
+    "stroke healing",
+  ],
 };
 
 export default function RootLayout({
