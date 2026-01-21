@@ -51,7 +51,7 @@ export default function HeroSection() {
 
         <div className="relative">
           <img
-            src="https://thumbs.dreamstime.com/b/relaxing-spa-interior-serene-lighting-lush-greenery-modern-wellness-center-setting-tranquil-room-features-361495577.jpg"
+            src="/images/stroke-expeller.jpg"
             alt="Serene wellness center"
             className="rounded-3xl object-cover h-96 w-full"
           />
