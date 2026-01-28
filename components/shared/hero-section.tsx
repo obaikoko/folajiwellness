@@ -1,61 +1,106 @@
-import { ChevronRight } from "lucide-react";
-
-const GET_STARTED =
-  "https://wa.me/2349077105627?text=Hello%20I%20want%20to%20get%20started%20with%20your%20stroke%20treatment";
-
-const LEARN_MORE =
-  "https://wa.me/2349077105627?text=Hello%20I%20would%20like%20to%20learn%20more%20about%20your%20services";
-
+import React from "react";
+import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
+  const scrollToOrder = () => {
+    document
+      .getElementById("order-form")
+      ?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <section
-      id="home"
-      className="pt-24 pb-20 bg-gradient-to-br from-emerald-50 to-teal-50"
-    >
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
-            Your Journey to{" "}
-            <span className="text-emerald-600">Optimal Wellness</span> Starts
-            Here
-          </h1>
+    <section className="relative min-h-screen bg-gradient-to-b from-emerald-900 via-emerald-800 to-emerald-700 overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 left-10 w-64 h-64 bg-white rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-lime-300 rounded-full blur-3xl" />
+      </div>
 
-          <p className="mt-6 text-xl text-gray-600">
-            At Folaji Wellness Services, we provide personalized, professional
-            health and wellness solutions to help you live your healthiest life.
-          </p>
-
-          <div className="mt-8 flex flex-col sm:flex-row gap-4">
-            {/* Get Started */}
-            <a
-              href={GET_STARTED}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-emerald-600 text-white px-8 py-4 rounded-full hover:bg-emerald-700 transition flex items-center justify-center gap-2"
-            >
-              Get Started <ChevronRight className="h-5 w-5" />
-            </a>
-
-            {/* Learn More */}
-            <a
-              href={LEARN_MORE}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border border-emerald-600 text-emerald-600 px-8 py-4 rounded-full hover:bg-emerald-50 transition text-center"
-            >
-              Learn More
-            </a>
-          </div>
-        </div>
-
-        <div className="relative">
+      <div className="relative z-10 container mx-auto px-4 py-12 md:py-20">
+        {/* Logo */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="flex justify-center mb-8"
+        >
           <img
-            src="/images/stroke-expeller.jpg"
-            alt="Serene wellness center"
-            className="rounded-3xl object-cover h-96 w-full"
+            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_6975cc7a8041aa10f06af7da/381047c22_download.png"
+            alt="Folaji Wellness Logo"
+            className="h-20 md:h-28 object-contain"
           />
-        </div>
+        </motion.div>
+
+        {/* Main Heading */}
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-3xl md:text-5xl lg:text-6xl font-bold text-white text-center max-w-4xl mx-auto leading-tight mb-6"
+        >
+          Regain Your Strength, <br />
+          <span className="text-lime-300">Restore Your Health</span> with Stroke
+          Expeller Tea
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-emerald-100 text-lg md:text-xl text-center max-w-2xl mx-auto mb-10"
+        >
+          100% Natural Herbal Formula • NAFDAC Approved • Trusted by Thousands
+        </motion.p>
+
+        {/* Product Image */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="flex justify-center mb-10"
+        >
+          <div className="relative">
+            <div className="absolute inset-0 bg-lime-400 rounded-3xl blur-2xl opacity-30 transform rotate-3" />
+            <img
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_6975cc7a8041aa10f06af7da/cb10bbb64_stroke1.jpg"
+              alt="Stroke Expeller Tea Product"
+              className="relative z-10 w-full max-w-lg md:max-w-xl rounded-2xl shadow-2xl"
+            />
+          </div>
+        </motion.div>
+
+        {/* CTA Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+          className="flex justify-center"
+        >
+          <Button
+            onClick={scrollToOrder}
+            size="lg"
+            className="bg-lime-500 hover:bg-lime-400 text-emerald-900 font-bold text-lg md:text-xl px-10 py-7 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+          >
+            Order Now & Save Up To ₦14,000
+          </Button>
+        </motion.div>
+
+        {/* Scroll indicator */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2 }}
+          className="flex justify-center mt-12"
+        >
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 2 }}
+          >
+            <ChevronDown className="w-8 h-8 text-lime-300" />
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

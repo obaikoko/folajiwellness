@@ -1,27 +1,24 @@
 "use client";
 
 import HeroSection from "@/components/shared/hero-section";
-import Navbar from "@/components/shared/navbar";
-import AboutSection from "@/components/shared/about";
-import TeamSection from "@/components/shared/team";
-import TestimonialsSection from "@/components/shared/testimonials";
-import BlogSection from "@/components/shared/blog";
-import FooterSection from "@/components/shared/footer";
-import ProductSection from "@/components/shared/product";
 
-export default function App() {
+import TestimonialsSection from "@/components/shared/testimonials";
+
+import ProductDescription from "@/components/shared/product-description";
+import ProductInfo from "@/components/shared/product-info";
+import TrustBadges from "@/components/shared/trust-badges";
+import Footer from "@/components/shared/footer";
+import OrderForm from "@/components/shared/orderForm";
+export default function Home() {
   return (
-    <>
-      <div className="min-h-screen bg-white text-gray-800">
-        <Navbar />
-        <HeroSection />
-        <AboutSection />
-        <TeamSection />
-        <ProductSection />
-        <TestimonialsSection />
-        <BlogSection />
-        <FooterSection />
-      </div>
-    </>
+    <div className="min-h-screen">
+      <HeroSection />
+      <ProductDescription />
+      <TestimonialsSection />
+      <ProductInfo />
+      <TrustBadges />
+      {/* <OrderForm /> */}
+      <Footer />
+    </div>
   );
 }
