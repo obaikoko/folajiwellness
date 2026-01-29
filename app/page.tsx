@@ -17,7 +17,7 @@ export default function Home() {
       <TestimonialsSection />
       <ProductInfo />
       <TrustBadges />
-      {/* <OrderForm /> */}
+      <OrderForm />
       <Footer />
     </div>
   );
