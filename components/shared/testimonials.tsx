@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, Play } from "lucide-react";
 
 const testimonials = [
   {
@@ -8,7 +8,7 @@ const testimonials = [
     location: "Lagos, Nigeria",
     image:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face",
-    text: "After my stroke, I struggled with mobility and constant fatigue. A friend recommended Stroke Expeller Tea, and within 3 weeks of consistent use, I noticed remarkable improvement. My energy levels increased, and my doctor was impressed with my blood pressure readings. This tea gave me my life back!",
+    text: "After my stroke, I struggled with mobility and constant fatigue. A friend recommended Stroke Expeller Tea, and within 3 weeks of consistent use, I noticed remarkable improvement.",
     rating: 5,
   },
   {
@@ -16,9 +16,16 @@ const testimonials = [
     location: "Ibadan, Nigeria",
     image:
       "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&h=200&fit=crop&crop=face",
-    text: "My husband suffered a mild stroke last year, and we were desperate for solutions. We discovered Stroke Expeller Tea and decided to try it alongside his medications. The results have been wonderful! His speech has improved significantly, and he's now able to walk without assistance. We're forever grateful!",
+    text: "My husband suffered a mild stroke last year, and we were desperate for solutions. Stroke Expeller Tea helped improve his speech and mobility.",
     rating: 5,
   },
+];
+
+const videoTestimonials = [
+  "_2RxoRvBBLA",
+  "Q1kCnVGguqc",
+  "n10vYu5Zrgk",
+  "823HAnapJ48",
 ];
 
 export default function TestimonialsSection() {
@@ -31,6 +38,7 @@ export default function TestimonialsSection() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -45,12 +53,13 @@ export default function TestimonialsSection() {
             Real People, Real Results
           </h2>
           <p className="text-emerald-200 text-lg max-w-2xl mx-auto">
-            Join thousands of satisfied customers who have experienced the
-            healing power of Stroke Expeller Tea
+            Watch and read how Stroke Expeller Tea is changing lives across
+            Nigeria
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {/* Text Testimonials */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-20">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -75,7 +84,7 @@ export default function TestimonialsSection() {
                 ))}
               </div>
 
-              {/* Testimonial text */}
+              {/* Text */}
               <p className="text-gray-700 text-lg leading-relaxed mb-6 italic">
                 "{testimonial.text}"
               </p>
@@ -99,6 +108,57 @@ export default function TestimonialsSection() {
             </motion.div>
           ))}
         </div>
+
+        {/* Video Testimonials */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="max-w-6xl mx-auto"
+        >
+          <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-10">
+            Video Testimonials 🎥
+          </h3>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {videoTestimonials.map((videoId, index) => (
+              <motion.div
+                key={videoId}
+                whileHover={{ scale: 1.05 }}
+                className="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-xl bg-black"
+              >
+                <iframe
+                  className="w-full h-full"
+                  src={`https://www.youtube.com/embed/${videoId}`}
+                  title="Customer Video Testimonial"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+
+                {/* Play overlay (visual polish) */}
+                {/* <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+                  <div className="bg-black/40 backdrop-blur-sm p-4 rounded-full">
+                    <Play className="w-8 h-8 text-white fill-white" />
+                  </div>
+                </div> */}
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Channel link */}
+          <div className="text-center mt-10">
+            <a
+              href="https://youtube.com/@folajiwellness"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 bg-lime-500 text-emerald-900 font-semibold rounded-full hover:bg-lime-400 transition"
+            >
+              Visit Folaji Wellness on YouTube →
+            </a>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
